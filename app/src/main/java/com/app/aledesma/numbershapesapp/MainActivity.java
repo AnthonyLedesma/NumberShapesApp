@@ -34,13 +34,18 @@ public class MainActivity extends AppCompatActivity {
 
             public void checkNum(View view){
                 EditText userInput = (EditText) findViewById(R.id.UserInput);
+                String output;
+                if (userInput.getText().toString().isEmpty()) {
+                    output = "Please enter a whole number";
+                } else {
 
-                GivenNumber anthony = new GivenNumber();
-                anthony.x = Integer.parseInt(userInput.getText().toString());
+                    GivenNumber anthony = new GivenNumber();
+                    anthony.x = Integer.parseInt(userInput.getText().toString());
 
-                String output = String.format(
-                        "You entered the number %d. It is %s that the number is a perfect square and it is %s that the number is a triangular number",
-                        anthony.x, anthony.isPerfectSquare(anthony.x), anthony.isTriangularNumber(anthony.x));
+                    output = String.format(
+                            "You entered the number %d. It is %s that the number is a perfect square and it is %s that the number is a triangular number",
+                            anthony.x, anthony.isPerfectSquare(anthony.x), anthony.isTriangularNumber(anthony.x));
+                }
                 Toast.makeText(this, output, Toast.LENGTH_SHORT).show();
             }
 
