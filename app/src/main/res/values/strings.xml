@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">NumberShapesApp</string>
+    <string name="WelcomeMessage">Welcome to Square and Triangle number checker! Simply enter any whole number and press check.</string>
+    <string name="Hint">Enter Whole Number</string>
+    <string name="CheckBtn">Check</string>
 </resources>
